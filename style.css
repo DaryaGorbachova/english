@@ -1,0 +1,133 @@
+:root {
+    --text: rgb(40, 40, 40);
+    --gold: rgb(226, 196, 128);
+    --golddark: rgb(194, 167, 106);
+    --brown: rgb(69, 56, 45);
+    --backgr-yellow: rgb(255, 244, 239);
+    --backgr-blue: rgb(214, 214, 255);
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 38px;
+    font-size: 22px;
+    scroll-behavior: smooth;
+    margin:auto;
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("9.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--gold);
+    padding: 0 14vw;
+  }
+  
+  li {
+    float:left;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: var(--text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--golddark);
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: var(--gold);}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+.text {
+    font-size: 26px;
+    color: var(--text)
+}
+
+.back {
+    padding:20vh 12vw;
+}
+
+
+
+  .backgrounded {
+    /* The image used */
+    background-image: url("1.jpg");
+  
+    /* Set a specific height */
+    padding:30vh 12vw;
+
+    vertical-align: center;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  footer {
+    padding:3vh 12vw;
+    background-color: var(--brown);
+    color:white;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+@media (max-width: 1000px) {
+  
+  .back {
+      padding: 12vh 10vw;
+  }
+  .backgrounded {
+      padding: 12vh 10vw;
+  }
+  ul {
+      padding: 0 4vw;
+  }
+}
