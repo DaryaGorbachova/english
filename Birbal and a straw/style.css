@@ -5,6 +5,8 @@
     --brown: rgb(69, 56, 45);
     --backgr-yellow: rgb(255, 244, 239);
     --backgr-blue: rgb(214, 214, 255);
+    --transp-black: rgba(31, 31, 31, 0.6);
+    --red:rgb(203, 0, 0);
 }
 
 body {
@@ -13,6 +15,20 @@ body {
     font-size: 22px;
     scroll-behavior: smooth;
     margin:auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    color:white;
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+    padding:10vh 12vw;
+    line-height: 52px;
+    vertical-align: center;
 }
 
 .text a {
@@ -34,43 +50,46 @@ body {
     background-size: cover;
 }
 
-ul {
+ #menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--gold);
+    background-color: var(--transp-black);
     padding: 0 14vw;
   }
   
-  li {
+
+
+ #menu li {
     float:left;
   }
   
-  li a, .dropbtn {
+ #menu li a, .dropbtn {
     display: inline-block;
-    color: var(--text);
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 
   }
   
-  li a:hover, .dropdown:hover .dropbtn {
+ #menu li a:hover, .dropdown:hover .dropbtn {
     background-color: var(--golddark);
   }
   
-  li.dropdown {
+ #menu li.dropdown {
     display: inline-block;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: var(--text);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    flex-direction: column;
   }
   
   .dropdown-content a {
@@ -81,39 +100,72 @@ ul {
     text-align: left;
   }
   
-  .dropdown-content a:hover {background-color: var(--gold);}
+  .dropdown-content a:hover {background-color: var(--golddark);}
   
   .dropdown:hover .dropdown-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
   }
 
 
-.text {
-    font-size: 26px;
-    color: var(--text)
-}
-
 .back {
-    padding:20vh 12vw;
+    font-size: 26px;
+    color: var(--text);
+    padding:2vh 18vw;
 }
 
 
 
   .backgrounded {
     /* The image used */
-    background-image: url("1.jpg");
+    background-image: url("immo-wegmann-lLRm3S-7Kfw-unsplash.jpg");
   
     /* Set a specific height */
-    padding:30vh 12vw;
-
-    vertical-align: center;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
   }
+
+  input {
+    background-color: white;
+    border:solid 3px hsl(0, 0%, 71%);
+    border-radius: 20px;
+    height: 26px;
+    outline: none;
+    padding: 5px 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 24px;
+    width: 320px;
+}
+
+button {
+    margin:auto;
+    margin-top: 20px;
+    background-color: var(--red);
+    border: none;
+    padding: 8px 30px;
+    border-radius: 20px;
+    color:white;
+    font: 20px 'Times New Roman', Times, serif;
+    box-shadow: 0px 0px 3px hsl(0, 0%, 71%);
+}
+
+button:hover {
+    box-shadow: 0px 0px 5px var(--transp-black);;
+}
+
+span {
+    background-color: var(--text);
+    color:var(--text);
+    padding:
+}
+
+span::selection {
+    color: white;
+}
 
   footer {
     padding:3vh 12vw;
@@ -126,10 +178,10 @@ ul {
 @media (max-width: 1000px) {
   
   .back {
-      padding: 12vh 10vw;
+      padding: 2vh 10vw;
   }
-  .backgrounded {
-      padding: 12vh 10vw;
+  h1 {
+      padding: 8vh 10vw;
   }
   ul {
       padding: 0 4vw;
