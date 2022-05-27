@@ -5,6 +5,11 @@
     --brown: rgb(69, 56, 45);
     --backgr-yellow: rgb(255, 244, 239);
     --backgr-blue: rgb(214, 214, 255);
+    --transp-black: rgba(31, 31, 31, 0.6);
+    --red:rgb(203, 0, 0);
+    --beige: rgb(232, 222, 194);
+    --lightgreen: rgb(183, 237, 183);
+    --lightred: rgb(255, 198, 198);
 }
 
 body {
@@ -15,7 +20,7 @@ body {
     margin:auto;
 }
 
-.text a {
+.back a {
   font-style: italic;
   color: var(--brown);
 }
