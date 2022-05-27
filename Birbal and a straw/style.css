@@ -127,17 +127,6 @@ h1 {
     background-size: cover;
   }
 
-  input {
-    background-color: white;
-    border:solid 3px hsl(0, 0%, 71%);
-    border-radius: 20px;
-    height: 26px;
-    outline: none;
-    padding: 5px 10px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 24px;
-    width: 320px;
-}
 
 button {
     margin:auto;
@@ -163,6 +152,10 @@ span {
 
 span::selection {
     color: white;
+}
+
+#answers {
+  display:none;
 }
 
   footer {

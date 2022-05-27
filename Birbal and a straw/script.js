@@ -1,5 +1,7 @@
 const readmodebtn = document.getElementById('read-mode');
 const text = document.querySelector('.back');
+const translbtn = document.getElementById('transl');
+const answers = document.getElementById('answers');
 
   let mode = 'off'
 readmodebtn.addEventListener('click', () => {
@@ -13,6 +15,12 @@ readmodebtn.addEventListener('click', () => {
     }
 })
 
+
+
 function selfunc(x) {
     window.getSelection().selectAllChildren(x);
 }
+
+translbtn.addEventListener('click', () => {
+    answers.style.display = 'block';
+})
