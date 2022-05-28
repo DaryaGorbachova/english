@@ -154,6 +154,11 @@ span::selection {
     color: white;
 }
 
+p::selection, li::selection,
+h3::selection, i::selection, b::selection{
+  background-color: var(--gold);
+}
+
 #answers {
   display:none;
 }
