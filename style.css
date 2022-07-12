@@ -25,6 +25,23 @@ body {
   color: var(--brown);
 }
 
+.back .news {
+  display:grid;
+  grid-template-columns: 40vw 40vw;
+  -ms-grid-column-align: center;
+  grid-gap: 2vw;
+  }
+
+
+.back .news-item .news-background {
+  background-size: cover; 
+  background-position: center;
+  height: 40vh; 
+  padding: 20px; 
+  border-radius: 30px; 
+  font-size: 30px; 
+  text-align: center;
+}
 .parallax {
     /* The image used */
     background-image: url("9.jpg");
@@ -131,12 +148,19 @@ ul {
 @media (max-width: 1000px) {
   
   .back {
-      padding: 12vh 10vw;
+      padding: 12vh 12vw;
   }
   .backgrounded {
-      padding: 12vh 10vw;
+      padding: 12vh 12vw;
   }
   ul {
       padding: 0 4vw;
   }
 }
+
+@media (max-width: 600px) {
+  .back .news {
+    grid-template-columns: 76vw;
+    grid-gap:5vh;
+    }
+  }
