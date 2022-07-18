@@ -80,18 +80,23 @@ const words = {
 //game itself
 cards.forEach(cards => cards.addEventListener('click', (ev) => {
 
-    ev.target.firstElementChild.style.display = 'block';
-    p++;
-    opened.push(ev.target);
+    if(ev.target.style.backgroundColor != 'var(--beige)'){
+        ev.target.firstElementChild.style.display = 'block';
+        p++;
+      opened.push(ev.target);  
+    } 
+    
     if (p == 2) check(opened);
-    if (p == 3) {
+    if (p > 2) {
         p = 0;
         if (correct == false) {
         opened.forEach(opened => opened.firstElementChild.style.display = 'none');  
         opened = []; 
-        ev.target.firstElementChild.style.display = 'block';
-        opened.push(ev.target);  
-        p++;  
+        if(ev.target.style.backgroundColor != 'var(--beige)'){
+            ev.target.firstElementChild.style.display = 'block';
+            p++;
+          opened.push(ev.target);  
+        }  
     } 
     
 }
