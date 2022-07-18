@@ -8,6 +8,7 @@
     --transp-black: rgba(31, 31, 31, 0.6);
     --red:rgb(203, 0, 0);
     --beige: rgb(232, 222, 194);
+    --highlighter: rgb(0, 247, 255);
 }
 
 body {
@@ -159,9 +160,59 @@ h3::selection, i::selection, b::selection{
   background-color: var(--gold);
 }
 
-#answers {
-  display:none;
+.memory {
+  display:grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-gap: 1.5vw;
 }
+
+.memory .card {
+  background-color: pink;
+  border: 10px solid white;
+  height: 18vh;
+  width: 11vw;
+  padding: 8px;
+  margin: 0 auto;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 1px 1px 7px var(--text);
+  cursor: pointer;
+  line-height: normal;
+}
+.memory .card:hover{
+  box-shadow: 2px 2px 10px var(--text);
+}
+
+.card p {
+  display:none;
+  font-variant: small-caps;
+  font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+.memory .card1 {
+  background-color: lightblue;
+  border: 10px solid white;
+  height: 18vh;
+  width: 11vw;
+  padding: 8px;
+  margin: 0 auto;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 1px 1px 7px var(--text);
+  cursor: pointer;
+}
+.memory .card1:hover{
+  box-shadow: 2px 2px 10px var(--text);
+}
+
+.card1 p {
+  font-variant: small-caps;
+  font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
 
   footer {
     padding:3vh 12vw;
@@ -181,5 +232,12 @@ h3::selection, i::selection, b::selection{
   }
   ul {
       padding: 0 4vw;
+  }
+  .memory {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .memory .card {
+    height: 25vh;
+    width: 18vw;
   }
 }
