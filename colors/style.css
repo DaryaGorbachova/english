@@ -1,0 +1,251 @@
+:root {
+    --text: rgb(40, 40, 40);
+    --gold: rgb(226, 196, 128);
+    --golddark: rgb(194, 167, 106);
+    --brown: rgb(69, 56, 45);
+    --backgr-yellow: rgb(255, 244, 239);
+    --backgr-blue: rgb(214, 214, 255);
+    --transp-black: rgba(31, 31, 31, 0.6);
+    --red:rgb(203, 0, 0);
+    --beige: rgb(232, 222, 194);
+    --highlighter: rgb(0, 247, 255);
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 38px;
+    font-size: 22px;
+    scroll-behavior: smooth;
+    margin:auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    color:white;
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+    padding:10vh 12vw;
+    line-height: 52px;
+    vertical-align: center;
+    margin: 0;
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("9.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ #menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--transp-black);
+    padding: 0 14vw;
+  }
+  
+
+
+ #menu li {
+    float:left;
+  }
+  
+ #menu li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+  }
+  
+ #menu li a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--golddark);
+  }
+  
+ #menu li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--text);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: column;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: var(--golddark);}
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+
+.back {
+    font-size: 26px;
+    color: var(--text);
+    padding:2vh 18vw;
+}
+
+
+
+  .backgrounded {
+    /* The image used */
+    background-image: url("crayons.jpg");
+  
+    /* Set a specific height */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+button {
+    margin:auto;
+    margin-top: 20px;
+    background-color: var(--red);
+    border: none;
+    padding: 8px 30px;
+    border-radius: 20px;
+    color:white;
+    font: 20px 'Times New Roman', Times, serif;
+    box-shadow: 0px 0px 3px hsl(0, 0%, 71%);
+}
+
+button:hover {
+    box-shadow: 0px 0px 5px var(--transp-black);;
+}
+
+span {
+    background-color: var(--text);
+    color:var(--text);
+    padding: 5px;
+}
+
+span::selection {
+    color: white;
+}
+
+p::selection, li::selection,
+h3::selection, i::selection, b::selection{
+  background-color: var(--gold);
+}
+
+.memory {
+  display:grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-gap: 5px;
+}
+
+.colors {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    margin-bottom: 32px;
+}
+
+.memory .card {
+  background-size: cover;
+  background-image: url('light-blue.jpg');
+  border: 10px solid white;
+  height: 15vh;
+  width: 8vw;
+  padding: 8px;
+  margin: 0 auto;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 1px 1px 7px var(--text);
+  cursor: pointer;
+  line-height: normal;
+}
+.memory .card:hover{
+  box-shadow: 2px 2px 10px var(--text);
+}
+
+.card p {
+  display:block;
+  font-variant: small-caps;
+  font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    color: var(--text);
+}
+
+.colors .card1 {
+    background-size: cover;
+    height: 8vh;
+    width: 3vw;
+    padding: 8px;
+    margin: 0 auto;
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 1px 1px 7px var(--text);
+    cursor: pointer;
+    line-height: normal;
+  }
+.colors .card1:hover {
+    box-shadow: 2px 2px 10px var(--text);
+}
+
+  footer {
+    padding:3vh 12vw;
+    background-color: var(--brown);
+    color:white;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  footer a {
+    color:white; 
+    font-style: italic;
+  }
+
+@media (max-width: 1000px) {
+  
+  .back {
+      padding: 2vh 10vw;
+  }
+  h1 {
+      padding: 8vh 10vw;
+  }
+  ul {
+      padding: 0 4vw;
+  }
+  .memory {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .memory .card {
+    height: 15vh;
+    width: 18vw;
+  }
+  .memory .card p {
+   font-size: 26px; 
+  }
+}

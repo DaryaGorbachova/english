@@ -190,29 +190,6 @@ h3::selection, i::selection, b::selection{
     font-size: 16px;
     text-align: center;
 }
-.memory .card1 {
-  background-color: lightblue;
-  border: 10px solid white;
-  height: 18vh;
-  width: 11vw;
-  padding: 8px;
-  margin: 0 auto;
-  border-radius: 15px;
-  align-items: center;
-  box-shadow: 1px 1px 7px var(--text);
-  cursor: pointer;
-}
-.memory .card1:hover{
-  box-shadow: 2px 2px 10px var(--text);
-}
-
-.card1 p {
-  font-variant: small-caps;
-  font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-}
-
 
   footer {
     padding:3vh 12vw;
