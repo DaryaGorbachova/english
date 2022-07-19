@@ -2,8 +2,13 @@ const readmodebtn = document.getElementById('read-mode');
 const back = document.querySelector('.back');
 const cards = document.querySelectorAll('.card')
 const cards1 = document.querySelectorAll('.card1');
-const checkbtn = document.getElementById('check');
+const checkbtn = document.querySelectorAll('.check');
 const congrats = document.getElementById('congrats');
+const inputComplete = document.querySelectorAll('.complete input');
+const inputQuiz = document.querySelectorAll('.quiz input')
+const score = document.querySelectorAll('.score');
+const learnbtn = document.getElementById('learn');
+const info = document.querySelector('.info');
 //cards game
 
 //words and defenitions
@@ -25,21 +30,22 @@ active.style.border = `5px solid ${picked}`;
 }))
 
 cards.forEach(cards => cards.addEventListener('click', (ev) => {
+    if(picked) {
     ev.target.style.backgroundImage = 'none';
    ev.target.style.backgroundColor = picked;
    if(ev.target.className == 'card') {
     ev.target.firstElementChild.style.backgroundColor = picked;
-  if(picked == 'black' || picked == 'brown' ||picked == 'blue') ev.target.firstElementChild.style.color = 'var(--golddark)';
+  if(picked == 'black' || picked == 'brown' ||picked == 'blue' || picked == 'green') ev.target.firstElementChild.style.color = 'var(--golddark)';
   else ev.target.firstElementChild.style.color = 'var(--text)';    
    }
     if (ev.target.parentElement.className == 'card') {
         ev.target.parentElement.style.backgroundColor = picked;
         ev.target.parentElement.style.backgroundImage = 'none';
-   }
+   }}
 }))
 //check answers
 let correctNum = 0;
-checkbtn.addEventListener('click', () => {
+checkbtn[0].addEventListener('click', () => {
     correctNum = 0;
     for (let i = 0; i < cards.length; i++) {
         if(cards[i].style.backgroundColor != cards[i].firstElementChild.innerHTML) {
@@ -47,6 +53,7 @@ checkbtn.addEventListener('click', () => {
         } else correctNum++;
     }
     if (correctNum == 10) congrats.style.display = 'block';
+    score[0].innerHTML = `${correctNum} out of ${cards.length}`
 })
 //random words display
 function randomKey () {
@@ -82,3 +89,49 @@ randomKey();
 
 // Object.keys(words)[num]; - random key
 // words[Object.keys(words)[num]]; - random Value
+
+
+
+//Quiz
+const answers = [['yellow', 'blue', 'red', 'white'],['yellow', 'pink', 'purple', 'green', 'blue']]
+let answer = [];
+let input = [inputQuiz, inputComplete];
+
+
+checkbtn[1].addEventListener('click', () => {
+    dealWithInput(0);
+    check(0);
+learnbtn.style.display = 'block';
+})
+
+learnbtn.addEventListener('click', () => {
+info.style.display = 'block';
+})
+
+//task 3
+
+
+checkbtn[2].addEventListener('click', () => {
+    dealWithInput(1);
+  check(1)  
+} )
+
+function dealWithInput(task) {
+    let inp = '';
+    answer = [];
+    for (let i = 0; i < input[task].length; i++) {
+    inp = input[task][i].value;
+    if (inp.slice(-1) === ' ') {
+        inp = input[task][i].value.slice(0, inp.length - 1);
+    } 
+    answer.push(inp.toLowerCase());        
+    }
+}
+
+function check(c) {
+for (let i = 0; i < answers[c].length; i++) {
+    if (answer[i] == answers[c][i]) {
+        input[c][i].style.backgroundColor = 'var(--lightgreen)';
+    } else input[c][i].style.backgroundColor = 'var(--lightred)'    
+}
+}

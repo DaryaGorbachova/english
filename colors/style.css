@@ -9,6 +9,8 @@
     --red:rgb(203, 0, 0);
     --beige: rgb(232, 222, 194);
     --highlighter: rgb(0, 247, 255);
+    --lightgreen: rgb(183, 237, 183);
+    --lightred: rgb(255, 198, 198);
 }
 
 body {
@@ -160,6 +162,18 @@ h3::selection, i::selection, b::selection{
   background-color: var(--gold);
 }
 
+input {
+  background-color: white;
+  border:solid 3px hsl(0, 0%, 71%);
+  border-radius: 20px;
+  height: 20px;
+  outline: none;
+  padding: 5px 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  width: 200px;
+}
+
 .memory {
   display:grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
@@ -190,7 +204,7 @@ h3::selection, i::selection, b::selection{
   box-shadow: 2px 2px 10px var(--text);
 }
 
-.card p {
+.memory .card p {
   display:block;
   font-variant: small-caps;
   font-weight: bold;
@@ -213,6 +227,34 @@ h3::selection, i::selection, b::selection{
   }
 .colors .card1:hover {
     box-shadow: 2px 2px 10px var(--text);
+}
+
+
+.complete {
+  display:grid;
+  grid-template-columns: 60% 40%;
+grid-gap: 20px;
+}
+
+img {
+  width: 20vw;
+  border-radius: 50px;
+  box-shadow: 1px 1px 5px var(--text);
+}
+
+.score {
+  background-color:var(--gold); 
+  width: 150px; 
+  text-align:center; 
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px var(--text);
+}
+
+#learn {
+  display:none;
+}
+.info {
+  display:none;
 }
 
   footer {
