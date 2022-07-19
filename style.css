@@ -20,6 +20,10 @@ body {
     margin:auto;
 }
 
+h2 {
+  text-align: center;
+}
+
 .back a {
   font-style: italic;
   color: var(--brown);
