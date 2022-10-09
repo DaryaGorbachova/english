@@ -35,21 +35,6 @@ h1 {
     margin: 0;
 }
 
-
-.parallax {
-    /* The image used */
-    background-image: url("9.jpg");
-  
-    /* Set a specific height */
-    min-height: 500px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
  #menu {
     list-style-type: none;
     margin: 0;
@@ -119,12 +104,12 @@ h1 {
 
   .backgrounded {
     /* The image used */
-    background-image: url("lamp.jpg");
+    background-image: url("lampa.jpg");
   
     /* Set a specific height */
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position:center;
+    background-position:bottom;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -192,12 +177,5 @@ input {
   }
   ul {
       padding: 0 4vw;
-  }
-  .memory {
-    grid-template-columns: 33% 33% 33%;
-  }
-  .memory .card {
-    height: 25vh;
-    width: 18vw;
   }
 }
