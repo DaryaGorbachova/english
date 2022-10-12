@@ -55,6 +55,49 @@
             <li>Bow down – <i>поклониться</i> </li>
             <li>Charity - <i>благотворительность, милостыня</i></li>
         </ul>
+
+        <div class='task'>
+            <h3>Prelistening task</h3>
+            <div class='task1'>
+                <div class='drag'  ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p id='drag1' draggable="true" ondragstart="drag(event)">pot</p>
+                    <p id='drag2' draggable="true" ondragstart="drag(event)">mortar</p>
+                    <p id='drag3' draggable="true" ondragstart="drag(event)">stove</p>
+                    <p id='drag4' draggable="true" ondragstart="drag(event)">yard</p>
+                    <p id='drag5' draggable="true" ondragstart="drag(event)">demigods</p>
+             </div>  
+             <div class='aimcontainer'>
+             <div class='dragaim'>
+                 <span id='aim1' ondrop="drop(event)" ondragover="allowDrop(event)"></span>
+                 <span id='aim2' ondrop="drop(event)" ondragover="allowDrop(event)"></span>
+                 <span id='aim3' ondrop="drop(event)" ondragover="allowDrop(event)"></span>
+                 <span id='aim4' ondrop="drop(event)" ondragover="allowDrop(event)"></span>
+                 <span id='aim5' ondrop="drop(event)" ondragover="allowDrop(event)"></span>
+             </div>
+                <div class='pictures'>
+                <span style="background-image: url('photos/mortar.jpeg')"></span>
+                <span style="background-image: url('photos/demigods.png')"></span>
+                <span style="background-image: url('photos/pot.jpg')"></span>
+                <span style="background-image: url('photos/stove.jpg')"></span>
+                <span style="background-image: url('photos/yard.jpg')"></span>
+            </div>
+            </div>
+            <div class='controls'>
+                <button class='submit'>Check</button>
+                <p class='outputCorAns' style="
+                    width: 50px;
+                    margin-top: 20px;
+                    background-color: var(--lightgreen);
+                    border: none;
+                    padding: 8px 30px;
+                    border-radius: 20px;
+                    text-align: center;
+                    font: 20px 'Times New Roman', Times, serif;
+                    box-shadow: 0px 0px 3px hsl(0, 0%, 71%);
+                ">0/5</p>
+            </div>
+            </div>
+        </div>        
     
     <audio src="audio.mp3" controls></audio>
             

@@ -104,12 +104,12 @@ h1 {
 
   .backgrounded {
     /* The image used */
-    background-image: url("lampa.jpg");
+    background-image: url("photo_2022-10-10_12-21-31.jpg");
   
     /* Set a specific height */
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position:bottom;
+    background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -159,6 +159,59 @@ input {
 }
 
 
+.drag {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 400px;
+  border-top: 2px solid var(--brown);
+  border-bottom: 2px solid var(--brown);
+  line-height: 15px;
+  padding: 20px;
+}
+
+.drag p {
+  cursor: pointer;
+  text-align: center;
+}
+
+.dragaim {
+  display: flex;
+  margin: 0px auto;
+  margin-bottom: 4px;
+  line-height: 0px; 
+  
+}
+.dragaim > span {
+  width: 20%;
+  padding: 20px; 
+  line-break:none;
+  border-radius: 8px;
+  text-align: center;
+  margin: 5px 8px;
+  color: var(--text);
+  background-color: var(--gold);   
+}
+
+.pictures {
+  display: flex;
+  margin: 0px auto;
+  margin-bottom: 4px;  
+}
+
+.pictures > span {
+  width: 20%;
+  height: 25vh;
+  padding: 20px; 
+  border-radius: 8px;
+  margin: 5px 8px;
+  background-color: var(--gold);  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+
   footer {
     padding:3vh 12vw;
     background-color: var(--brown);
@@ -177,5 +230,20 @@ input {
   }
   ul {
       padding: 0 4vw;
+  }
+}
+
+@media only screen and (max-width:  550px) {
+
+  .dragaim > span p{
+  transform: rotate(90deg);
+  }
+  .dragaim > span {
+      padding: 20px 0px 60px 0px;
+      margin: 2px auto ;
+      border-right: 1px solid var(--border-col)
+  }
+  .pictures {
+      max-height: 150px;
   }
 }
