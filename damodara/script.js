@@ -48,14 +48,19 @@ let elem;
 
 dragtext.forEach(dragtext => dragtext.addEventListener('click', ev => {
     if (typeof elem == 'string') document.getElementById(elem).style.color = 'var(--text)';
-    if (ev.target.parentElement.className === 'drag') elem = ev.target.id;
-   else  dragfield.appendChild(ev.target);
-   ev.target.style.color = 'var(--golddark)';
+    if (ev.target.parentElement.className === 'drag') { 
+        elem = ev.target.id;
+        ev.target.style.color = 'var(--golddark)';
+    }
 }))
 
 dragaims.forEach(dragaims => dragaims.addEventListener('click', e => {
+    if (typeof elem == 'string'){
  e.target.appendChild(document.getElementById(elem));
  document.getElementById(elem).style.color = 'var(--text)';
+    }
+ if (elem == 0 && e.target.parentElement.className == 'dragaim')   dragfield.appendChild(e.target.children[0]);
+ else if (elem == 0 && e.target.nodeName == 'P')   dragfield.appendChild(e.target);
  elem = 0;
 }))
 
