@@ -199,9 +199,9 @@ input {
   margin-bottom: 4px;  
 }
 
-.pictures > span {
+.pictures span {
   width: 20%;
-  height: 25vh;
+  height: 15vw;
   padding: 20px; 
   border-radius: 8px;
   margin: 5px 8px;
@@ -240,10 +240,10 @@ input {
   }
   .dragaim > span {
       padding: 20px 0px 60px 0px;
-      margin: 2px auto ;
+      margin: 2px 1px ;
       border-right: 1px solid var(--border-col)
   }
-  .pictures {
-      max-height: 150px;
+  .pictures span {
+    margin: 1px;
   }
 }

@@ -29,7 +29,7 @@ function checkPrelistening () {
             dragaims[i].style.backgroundColor = 'var(--lightgreen)';
         } else dragaims[i].style.backgroundColor = 'var(--lightred)';
 }
-outputCorAns[0].style.opacity = '100%';
+outputCorAns[0].style.display = 'block';
 outputCorAns[0].innerHTML = `${correct1}/${dragAnswers.length}`;
 }
 
