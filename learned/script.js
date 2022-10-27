@@ -3,8 +3,8 @@ const input = document.querySelectorAll('input');
 
 const dragAnswers = ['drag7', 'drag4', 'drag6', 'drag5', 'drag3', 'drag2', 'drag1'];
 const  dragaims = document.querySelectorAll('.dragaim');
-const dragtext = document.querySelectorAll(".drag p");
-const dragfield = document.querySelector(".drag");
+const dragtext = document.querySelectorAll(".drag span");
+const dragfield = document.querySelectorAll(".drag");
 const submitbtn = document.querySelector('.submit')
 const outputCorAns = document.querySelectorAll('.outputCorAns');
 function allowDrop(ev) {
@@ -45,23 +45,36 @@ submitbtn.addEventListener('click', () => {
 })
 
 let elem;
-
+let numelem;
 dragtext.forEach(dragtext => dragtext.addEventListener('click', ev => {
     if (typeof elem == 'string') document.getElementById(elem).style.color = 'var(--text)';
     if (ev.target.parentElement.className === 'drag') { 
         elem = ev.target.id;
-        ev.target.style.color = 'var(--golddark)';
+        ev.target.style.color = 'var(--red)';
     }
+}))
+dragfield.forEach(dragfield => dragfield.addEventListener('click', e => {
+    console.log(1);
+    if (typeof elem == 'string' && e.target.nodeName == 'TH') {
+        console.log(e.target);
+        e.target.appendChild(document.getElementById(elem));
+        document.getElementById(elem).style.color = 'var(--text)';
+        elem = 0;
+    } 
 }))
 
 dragaims.forEach(dragaims => dragaims.addEventListener('click', e => {
     if (typeof elem == 'string'){
  e.target.appendChild(document.getElementById(elem));
  document.getElementById(elem).style.color = 'var(--text)';
-    }
- if (elem == 0 && e.target.parentElement.className == 'dragaim')   dragfield.appendChild(e.target.children[0]);
- else if (elem == 0 && e.target.nodeName == 'P')   dragfield.appendChild(e.target);
  elem = 0;
+    }
+ if (elem == 0 && e.target.parentElement.className == 'dragaim')   {
+    elem = e.target.id;
+    numelem = elem.slice(4, 5) - 1;
+    e.target.style.color = 'var(--red)';
+ }
+ 
 }))
 
 const answers = ['face-to-face', 'naughty',  'playing any more tricks', 'gave away in charity', 'got stuck', 'dazzling bright'];
