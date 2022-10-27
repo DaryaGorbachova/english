@@ -77,8 +77,7 @@ dragaims.forEach(dragaims => dragaims.addEventListener('click', e => {
  
 }))
 
-const answers = ['face-to-face', 'naughty',  'playing any more tricks', 'gave away in charity', 'got stuck', 'dazzling bright'];
-const altanswers = ['face to face'];
+const answers = ['self-controlled', 'envious',  'kindness', 'faithful', 'equality'];
 
 let answer = '';
 
@@ -91,7 +90,7 @@ function dealWithInput(i) {
 }
 
 function check1(i) {
-    if (answer === answers[i] || answer === altanswers[i]) {
+    if (answer === answers[i]) {
         input[i].style.backgroundColor = 'var(--lightgreen)'
     } else input[i].style.backgroundColor = 'var(--lightred)'
 }

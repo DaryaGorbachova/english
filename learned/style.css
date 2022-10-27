@@ -34,6 +34,7 @@
       line-height: 52px;
       vertical-align: center;
       margin: 0;
+      backdrop-filter: brightness(75%);
   }
   
    #menu {
@@ -105,8 +106,7 @@
   
     .backgrounded {
       /* The image used */
-      background-image: url("freestocks-Y9mWkERHYCU-unsplash.jpg");
-    
+      background-image: url("aleks-marinkovic-Xbsuh9n04Kg-unsplash.jpg");
       /* Set a specific height */
       /* Create the parallax scrolling effect */
       background-attachment: fixed;
@@ -181,7 +181,7 @@
 
 
 .dragaim {
-    min-width: 50px;
+    min-width: 187px;
     background-color: var(--gold);
     border-radius: 8px;
     height: 32px;
@@ -192,7 +192,6 @@
 } 
 
 th {
-    //width: 250px;
     text-align: left;
 }
   
@@ -223,15 +222,20 @@ th {
   
   @media only screen and (max-width:  550px) {
   
-    .dragaim > span p{
-    transform: rotate(90deg);
-    }
-    .dragaim > span {
-        padding: 20px 0px 60px 0px;
-        margin: 2px 1px ;
-        border-right: 1px solid var(--border-col)
-    }
-    .pictures span {
-      margin: 1px;
+th {
+  display:flex;
+}
+.drag span{
+position: absolute;
+right: 20px;
+color: var(--brown)
+}
+  }
+
+  @media only screen and (max-width:  365px) {
+  
+    th {
+      display:flex;
+      font-size: 18px;
     }
   }
