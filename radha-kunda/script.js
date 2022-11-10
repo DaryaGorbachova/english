@@ -3,7 +3,7 @@ const useInput = document.querySelectorAll('.use');
 const aim = document.querySelectorAll('.aim');
 const drags = document.querySelectorAll('.drag p');
 const column = document.querySelectorAll('.column li');
-const answers = [['enthusiastic', 'respectful', 'deepened', 'location', 'creation', 'glorious', 'pufify', 'desire', 'desire', 'separation'],
+const answers = [['enthusiastic', 'respectful', 'deepened', 'location', 'creation', 'glorious', 'purify', 'desire', 'desire', 'separation'],
 ['desire', 'entire', 'eagerly', 'deepened', 'nearby', 'realized', 'refrain']]
 const input = [formInput, useInput];
 
