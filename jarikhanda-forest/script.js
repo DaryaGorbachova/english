@@ -1,5 +1,18 @@
 const cards = document.querySelectorAll('.card')
 
+const back = document.querySelector('.back');
+const readmodebtn = document.getElementById('read-mode');
+
+let mode = 'off'
+readmodebtn.addEventListener('click', () => {
+    if(mode == 'off') {
+        mode = 'on';
+    back.style.backgroundColor = 'var(--beige)';
+    } else if (mode == 'on') {
+        mode = 'off';
+    back.style.backgroundColor = 'white';
+    }
+})
 
 //words and defenitions
 
@@ -121,3 +134,39 @@ randomKey();
 randomValue();
 // Object.keys(words)[num]; - random key
 // words[Object.keys(words)[num]]; - random Value
+
+
+// writing tasks
+let answers = [['monkeys', 'tigers', 'birds', 'rivers', 
+'enemies', 'parrots', 'snakes', 'elephants', 'lions', 'trees'], 
+['sings', 'sing', 'travels', 'travel', 'sees', 'see',
+'decides', 'stands up', 'sings', 'goes', 'decide', 'cooks', 
+'leave', 'go', 'touches', 'begin', 'agrees']];
+
+const plInput = document.querySelectorAll('.pl');
+const presentInput = document.querySelectorAll('.present');
+const input = [plInput, presentInput];
+
+let num;
+let answer = '';
+
+function checkAll(c) {
+    num = c;
+    for(let i = 0; i < (input[c].length); i++) {
+        dealWithInput(i);
+        check1(i);
+    }
+}
+function dealWithInput(i) {
+    answer = input[num][i].value;
+    if (answer.slice(-1) === ' ') {
+        answer = input[num][i].value.slice(0, answer.length - 1);
+    } 
+    answer = answer.toLowerCase();
+}
+
+function check1(i) {
+    if (answer === answers[num][i]) {
+        input[num][i].style.backgroundColor = 'var(--lightgreen)'
+    } else input[num][i].style.backgroundColor = 'var(--lightred)'
+}

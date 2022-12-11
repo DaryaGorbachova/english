@@ -45,7 +45,9 @@
     
     <h1 style="color:white">Jarikhanda Forest (A0-A1)</h1></div>
     <div class="back">
-   <h3 style="margin-bottom: 8px;">Read the words.</h3>   
+        <button id="read-mode">Reading mode</button>
+
+   <h3 id="text" style="margin-bottom: 8px;">Read the words.</h3>   
    <h4>Прочитайте слова.</h4>
 <ul>
     <li>Alone – <i>в одиночку</i> </li>
@@ -78,46 +80,8 @@
 <p>Lord Chaitanya goes deeper into the jungle. He sings so loudly that different animals come to Him. Tigers, deer, elephants, monkeys, birds and snakes sing together the Holy Name. They are no longer enemies. Even the trees sing too.</p>
 <p>Lord Chaitanya makes everyone Krishna’s devotees.</p>
 
-<div id ='grammar'>
-<h3 style="margin-bottom: 8px;">Make plural of these nouns.</h3>
-   <h4> Сделайте множественное число существительных.</h4>
-   <ul>
-    <li>Monkey <input class="pl" type="text"></li>
-    <li>Tiger <input class="pl" type="text"></li>
-    <li>Bird <input class="pl" type="text"></li>
-    <li>River <input class="pl" type="text"></li>
-    <li>Enemy <input class="pl" type="text"></li>
-    <li>Parrot <input class="pl" type="text"></li>
-    <li>Snake <input class="pl" type="text"></li>
-    <li>Elephant <input class="pl" type="text"></li>
-    <li>Lion <input class="pl" type="text"></li>
-    <li>Tree <input class="pl" type="text"></li>
-   </ul>
 
-<h3 style="margin-bottom: 8px;">Use the verb in Present Simple.</h3>
-  <h4>  Употребите глагол в настоящем простом времени.</h4>
-
-<ol>
-    <li>He <input class="present" type="text"> (sing).</li>
-    <li>They <input class="present" type="text"> (sing).</li>
-    <li>He <input class="present" type="text"> (travel).</li>
-    <li>They <input class="present" type="text"> (travel).</li>
-    <li>He <input class="present" type="text"> (see).</li>
-    <li>They <input class="present" type="text"> (see).</li>
-    <li>Lord Chaitanya <input class="present" type="text"> (decide) to travel alone.</li>
-    <li>The tiger <input class="present" type="text"> (stand up) and <input class="present" type="text"> (sing).</li>
-    <li>Balabhadra Bhattacharya <input class="present" type="text"> (go) with Chaitanya.</li>
-    <li>They <input class="present" type="text"> (decide) to go through Jarikhanda forest.</li>
-    <li>Balabhadra Bhattacharya <input class="present" type="text"> (cook) for Lord Chaitanya.</li>
-    <li>They <input class="present" type="text"> (leave) the city and <input class="present" type="text"> (go) into the jungle.</li>
-    <li>Lord <input class="present" type="text"> (touch) the tiger.</li>
-    <li>Animals <input class="present" type="text"> (begin) to sing Krishna’s names.</li>
-    <li>Lord <input class="present" type="text"> (agree) to take Balabhadra Bhattacharya with Him.</li>
-</ol>
-</div>
-
-<div class="vocab">
-    <h3>Memory game.</h3>
+    <h3 id="vocab">Memory game.</h3>
 <p>На розовых карточках написаны слова, а на голубых находятся картинки. <br> Ваша задача – соединить слово 
 с картинкой. Одновременно открытыми могут быть лишь две карточки. </p>
     <div class="memory">
@@ -139,7 +103,46 @@
         <div class="card"><span></span></div>
         <div class="card"><span></span></div>
     </div>
-</div>
+
+
+<h3 id ='plural' style="margin-bottom: 8px;">Make plural of these nouns.</h3>
+   <h4> Сделайте множественное число существительных.</h4>
+   <ul>
+    <li>Monkey <input class="pl" type="text"></li>
+    <li>Tiger <input class="pl" type="text"></li>
+    <li>Bird <input class="pl" type="text"></li>
+    <li>River <input class="pl" type="text"></li>
+    <li>Enemy <input class="pl" type="text"></li>
+    <li>Parrot <input class="pl" type="text"></li>
+    <li>Snake <input class="pl" type="text"></li>
+    <li>Elephant <input class="pl" type="text"></li>
+    <li>Lion <input class="pl" type="text"></li>
+    <li>Tree <input class="pl" type="text"></li>
+   </ul>
+   <button class="check" onclick = "checkAll(0)">Check</button>
+
+<h3 id="ps" style="margin-bottom: 8px;">Use the verb in Present Simple. You can read the rule <a target="_blank" href="../present-simple/rule#affirmative">here</a>.</h3>
+  <h4>  Употребите глагол в настоящем простом времени. Правило <a target="_blank" href="../present-simple/rule#affirmative">здесь</a>.</h4>
+
+<ol>
+    <li>He <input class="present" type="text"> (sing).</li>
+    <li>They <input class="present" type="text"> (sing).</li>
+    <li>He <input class="present" type="text"> (travel).</li>
+    <li>They <input class="present" type="text"> (travel).</li>
+    <li>He <input class="present" type="text"> (see).</li>
+    <li>They <input class="present" type="text"> (see).</li>
+    <li>Lord Chaitanya <input class="present" type="text"> (decide) to travel alone.</li>
+    <li>The tiger <input class="present" type="text"> (stand up) and <input class="present" type="text"> (sing).</li>
+    <li>Balabhadra Bhattacharya <input class="present" type="text"> (go) with Chaitanya.</li>
+    <li>They <input class="present" type="text"> (decide) to go through Jarikhanda forest.</li>
+    <li>Balabhadra Bhattacharya <input class="present" type="text"> (cook) for Lord Chaitanya.</li>
+    <li>They <input class="present" type="text"> (leave) the city and <input class="present" type="text"> (go) into the jungle.</li>
+    <li>Lord <input class="present" type="text"> (touch) the tiger.</li>
+    <li>Animals <input class="present" type="text"> (begin) to sing Krishna’s names.</li>
+    <li>Lord <input class="present" type="text"> (agree) to take Balabhadra Bhattacharya with Him.</li>
+</ol>
+<a href="#ps"><button class="check" onclick = "checkAll(1)">Check</button></a>
+
 
 <p style="text-align:right; font-style: italic;">November 2022</p>
 </div>
@@ -149,14 +152,14 @@
         The site is developed for self-improvement. You are free to use all the material
         in your self-studying.
         <br>
-        <a target="_blank" href="https://unsplash.com/photos/pn5QFm6U3Lw">photo</a>
-        Images <a target="_blank" href="https://www.freepik.com/free-vector/hand-drawn-dotted-snake-illustration_4192005.htm#query=snake&position=13&from_view=search&track=sph">Snake</a>
-        <a target="_blank" href="https://www.freepik.com/free-vector/exotic-bird-collection-flat-style_4920476.htm#query=parrot&position=2&from_view=search&track=sph">Parrot</a>
-        <a target="_blank" href="https://www.freepik.com/free-vector/set-different-tree-design_3875712.htm#query=tree&position=0&from_view=search&track=sph">Tree</a>
-        <a target="_blank" href="https://www.freepik.com/free-vector/river-top-view-cartoon-curve-riverbed-with-blue-water-coastline-with-rocks-trees-green-grass_9396078.htm#query=river&position=1&from_view=search&track=sph">River</a>
-        <a target="_blank" href="https://www.freepik.com/free-vector/cartoon-african-animals-savannah-wild-beasts_29314744.htm#query=jungle%20animals&position=23&from_view=search&track=sph">Lion and monkey</a>
-        <a target="_blank" href="https://www.freepik.com/free-vector/cute-tigers-different-poses-cartoon-illustration-set-african-tiger-tigress-sitting-together-wildcats-stretching-sleeping-tree-branch-wildlife-jungle-concept_26156480.htm#query=tiger&from_query=tiget&position=3&from_view=search&track=sph">Tirer</a>
-        <a target="_blank" href="https://www.freepik.com/free-vector/sticker-template-elephant-cartoon-character_21300760.htm#query=elephant&position=31&from_view=search&track=sph">Elephant</a>
+        <a target="_blank" href="https://unsplash.com/photos/qzgN45hseN0">Photo</a><br>
+        Images from the Memory game: <a target="_blank" href="https://www.freepik.com/free-vector/hand-drawn-dotted-snake-illustration_4192005.htm#query=snake&position=13&from_view=search&track=sph">Snake</a>, 
+        <a target="_blank" href="https://www.freepik.com/free-vector/exotic-bird-collection-flat-style_4920476.htm#query=parrot&position=2&from_view=search&track=sph">Parrot</a>, 
+        <a target="_blank" href="https://www.freepik.com/free-vector/set-different-tree-design_3875712.htm#query=tree&position=0&from_view=search&track=sph">Tree</a>, 
+        <a target="_blank" href="https://www.freepik.com/free-vector/river-top-view-cartoon-curve-riverbed-with-blue-water-coastline-with-rocks-trees-green-grass_9396078.htm#query=river&position=1&from_view=search&track=sph">River</a>, 
+        <a target="_blank" href="https://www.freepik.com/free-vector/cartoon-african-animals-savannah-wild-beasts_29314744.htm#query=jungle%20animals&position=23&from_view=search&track=sph">Lion and monkey</a>, 
+        <a target="_blank" href="https://www.freepik.com/free-vector/cute-tigers-different-poses-cartoon-illustration-set-african-tiger-tigress-sitting-together-wildcats-stretching-sleeping-tree-branch-wildlife-jungle-concept_26156480.htm#query=tiger&from_query=tiget&position=3&from_view=search&track=sph">Tirer</a>, 
+        <a target="_blank" href="https://www.freepik.com/free-vector/sticker-template-elephant-cartoon-character_21300760.htm#query=elephant&position=31&from_view=search&track=sph">Elephant</a>.
 
     </p>
 </footer>
