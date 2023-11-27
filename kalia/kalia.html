@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna and Kalia (B1)</title>
+    <link rel='icon' href='../materials/icon.png'>
+    <link rel='stylesheet' href='style.css'>
+
+    <script>
+
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
+</head>
+<body>
+    <div class='backgrounded'>
+        <ul id="menu">
+            <li><a href="../news">News</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" style="color:white;">Level</a>
+                <div class="dropdown-content">
+                    <a href="../a0">A0 (Starter)</a>
+                    <a href="../a1">A1 (Elementary)</a>
+                    <a href="../a2">A2 (Pre-intermediate)</a>
+                    <a href="../b1">B1 (Intermediate)</a>
+                    <a href="../b2">B2 (Upper-intermediate)</a>
+                    <a href="../c1">C1 (Advanced)</a>
+                    <a href="https://www.englishdom.com/test-your-english-level/test/" target="_blank">Don't know my level</a>
+                </div>
+              </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn"style="color:white;">Activity</a>
+              <div class="dropdown-content">
+                <a href="../listening">Listening</a>
+                <a href="../reading">Reading</a>
+                <a href="../rules">Grammar rules</a>
+                <a href="../vocabulary">Vocabulary</a>
+              </div>
+            </li>
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Contact Information</a>
+                <div class="dropdown-content">
+                    <a href="../vaishnava_eng">About the website</a>
+                    <a href="https://forms.gle/Wa6LKE5aFu3E1AiN9" target="_blank">Say thanks</a></div>
+            </li>        
+          </ul>
+       <h1>Krishna and Kalia (B1)</h1>
+    </div>
+    <div class="back">
+        <button id="read-mode">Reading mode</button>
+
+        <h3>Look through the vocabulary from the text.</h3>
+<ul>
+    <li>As it turned out – как оказалось</li>
+    <li>Bank – <i>берег</i></li>
+    <li>Bite – <i>укусить</i> </li>
+    <li>Cheer [tʃɪə] – <i>возрадоваться</i> </li>
+    <li>Come round – <i>прийти в себя, прийти в чувство</i></li>
+    <li>Elder – <i>старший</i> </li>
+    <li>Exhausted [ɪɡˈzɔːstɪd] – <i>очень уставший</i> </li>
+    <li>Finally – <i>наконец-то</i> </li>
+    <li>Footprint – <i>след, отпечаток ноги</i> </li>
+    <li>Free oneself – <i>освободиться</i> </li>
+    <li>Get rid of smth/smb – <i>избавиться от чего-л./ кого-л.</i> </li>
+    <li>Hold – <i>держать</i> </li>
+    <li>Immediately [ɪˈmiːdiətli] – <i>немедленно</i> </li>
+    <li>Make sure – <i>убедиться</i> </li>
+    <li>Many-headed – <i>многоголовый</i> </li>
+    <li>Meanwhile – <i>тем временем</i> </li>
+    <li>Mercy [ˈmɜːsi] – <i>милость</i> </li>
+    <li>Poisonous [ˈpɔɪzənəs] – <i>ядовитый</i> </li>
+    <li>Pray [preɪ] – <i>молиться</i> </li>
+    <li>Suddenly [ˈsʌdənli] – <i>внезапно</i> </li>
+    <li>Terrified – <i>вне себя от страха</i> </li>
+</ul>
+
+<h3>Read the text</h3>
+<p>One day, when Krishna was playing with His friends on the banks of the Yamuna river, 
+    the boys and cows became thirsty, so they drank some water from the Yamuna. 
+    Suddenly, they fell down on the ground. The river, as it turned out, was poisonous because serpent Kalia lived in the water.
+     Krishna knew about Kalia. When He looked at His friends, they came round. He decided to get rid of Kalia. 
+     So He climbed a big kadamba tree and jumped into the water. Kalia came to the noise and attacked Krishna. 
+     All the boys and cows became terrified. </p>
+     <p>Meanwhile in Vrindavana, people felt that something was wrong. They knew that Krishna’s elder brother Balarama wasn’t with Him today. 
+        They wanted to make sure that everything was OK, so they immediately left the village and came to the banks of the river Yamuna. 
+        When they arrived, they saw that a big black many-headed serpent was holding their dear Krishna in his tail. 
+        Krishna’s mother Yashoda wanted to save her son and jump into the river but Balarama stopped her. </p>
+<p>Krishna saw that everyone was really worried. So He freed Himself. Kalia was angry. 
+    He tried to bite Krishna but couldn’t. He tried again and again but Krishna moved too quickly. 
+    Soon Kalia became exhausted. Krishna noticed this and jumped up on Kalia’s head and began to dance. 
+    He jumped from one head to another. Kalia was so tired that he almost died. 
+    But then Kalia’s wives began to pray to Krishna, “Please, don’t kill him. Show him some mercy.” 
+    Krishna listened to them and agreed not to kill Kalia. But He told Kalia to leave the Yamuna. 
+    Kalia was afraid to go to the ocean because Garuda, the king of birds, could attack him. 
+    But Krishna told him “You have my footprints on your heads. Garuda will not attack you.” 
+    Finally, Kalia and his wives left the Yamuna river. All the people, who were still standing on the banks of the river, cheered. 
+    Their Krishna was safe now.</p>
+
+    <h3>Match the word with its description.</h3>
+    <div class="vocab" style="text-align: center; font-weight: bold;"   ondrop="drop(event)" ondragover="allowDrop(event)">
+        <span id="drag1"  draggable="true" ondragstart="drag(event)">Poisonous</span>
+        <span id="drag2"  draggable="true" ondragstart="drag(event)">Finally</span>
+        <span id="drag3"  draggable="true" ondragstart="drag(event)">Immediately</span>
+        <span id="drag4"  draggable="true" ondragstart="drag(event)">Bank</span>
+        <span id="drag5"  draggable="true" ondragstart="drag(event)">Terrified</span>
+        <span id="drag6"  draggable="true" ondragstart="drag(event)">Meanwhile</span>
+        <span id="drag7"  draggable="true" ondragstart="drag(event)">Exhausted</span>
+    </div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="define">Very tired</td>
+            <td class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        <tr>
+            <td class="define">At once</td>
+            <td class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        <tr>
+            <td class="define">Very scared</td>
+            <td class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        <tr>
+            <td class="define">Toxic</td>
+            <td class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        <tr>
+            <td class="define">The land on the side of a river or sea</td>
+            <td class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        <tr>
+            <td class="define">At last</td>
+            <td class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        <tr>
+            <td class="define">While smth else is happening</td>
+            <td class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+        
+    </tbody>    
+    </table>
+    <div class='controls'>
+        <button class='submit' style="margin-bottom: 20px;">Check</button>
+        <p class='outputCorAns' style="
+            display:none;
+            width: 50px;
+            background-color: var(--lightgreen);
+            border: none;
+            padding: 8px 30px;
+            border-radius: 20px;
+            text-align: center;
+            font: 20px 'Times New Roman', Times, serif;
+            box-shadow: 0px 0px 3px hsl(0, 0%, 71%);
+        ">0/5</p>
+    </div>
+
+<h3>Choose the words or phrases and fill in the gaps. <br>
+    <i>You may cross out the words you have used.</i>
+</h3>
+<div id="vocab" style="font-weight: bold; color: var(--red)">
+<span>finally</span>
+<span>immediately</span>
+<span>get rid of</span>
+<span>elder</span>
+<span>make sure</span>
+<span>it turned out</span>
+<span>exhausted</span>
+<span>terrified</span>
+</div>
+<ol>
+    <li>She is <input type="text"> of spiders.</li>
+    <li>When Mary woke up in the morning, she understood that she was late for Mangala arati, 
+        so she got up <input type="text">. 
+        Her <input type="text"> sister was already taking shower. 
+        When <input type="text"> the sisters got to the temple, the arati began. 
+        Later <input type="text"> that Sita also overslept. 
+        She too was <input type="text"> from the events of yesterday evening 
+        when she and Mary were making a lot of garlands for the holiday.</li>
+    <li>I came to <input type="text"> that you are OK.</li>
+    <li>I need to <input type="text"> my habit to interrupt people.</li>
+</ol>
+<button id="check"onclick = 'checkAll()'>Check</button>
+
+<h3>Agree or disagree with the statements.</h3>
+<ol>
+    <li>Krishna’s friends were terrified when He jumped into the river.</li>
+    <li>Kalia was a big black serpent that attacked Krishna.</li>
+    <li>Balarama tried to save Krishna from Kalia.</li>
+    <li>Kalia’s wives left the river when they saw that their husband was exhausted.</li>
+    <li>Krishna told Kalia not to worry about Garuda.</li>
+</ol>
+
+<h3>Retell the story.</h3>
+
+          <p style="text-align:right; font-style: italic;">November 2023</p>
+</div>
+
+<footer>
+    <p>Copyright © All rights reserved. If there are any materials from other sources, we provode links to them.
+        The site is developed for self-improvement. You are free to use all the material
+        in your self-studying.
+        <br>
+        <a target="_blank" href="https://unsplash.com/photos/a-flock-of-birds-flying-through-a-foggy-sky-La00TWnTgf8">Photo</a>
+     
+    </p>
+</footer>
+
+    <script src='script.js'></script>
+
+</body>
+</html>
