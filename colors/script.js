@@ -31,16 +31,13 @@ active.style.border = `5px solid ${picked}`;
 
 cards.forEach(cards => cards.addEventListener('click', (ev) => {
     if(picked) {
-    ev.target.style.backgroundImage = 'none';
    ev.target.style.backgroundColor = picked;
    if(ev.target.className == 'card') {
-    ev.target.firstElementChild.style.backgroundColor = picked;
-  if(picked == 'black' || picked == 'brown' ||picked == 'blue' || picked == 'green') ev.target.firstElementChild.style.color = 'var(--golddark)';
-  else ev.target.firstElementChild.style.color = 'var(--text)';    
+    ev.target.style.backgroundColor = picked;    
    }
     if (ev.target.parentElement.className == 'card') {
+        ev.target.style.backgroundColor = 'var(--white)';
         ev.target.parentElement.style.backgroundColor = picked;
-        ev.target.parentElement.style.backgroundImage = 'none';
    }}
 }))
 //check answers
@@ -49,7 +46,7 @@ checkbtn[0].addEventListener('click', () => {
     correctNum = 0;
     for (let i = 0; i < cards.length; i++) {
         if(cards[i].style.backgroundColor != cards[i].firstElementChild.innerHTML) {
-            cards[i].style.backgroundImage = 'url("red.jpg")';
+            cards[i].style.backgroundColor = 'var(--backgr-yellow)';
         } else correctNum++;
     }
     if (correctNum == 10) congrats.style.display = 'block';

@@ -3,7 +3,7 @@
     --gold: rgb(226, 196, 128);
     --golddark: rgb(194, 167, 106);
     --brown: rgb(69, 56, 45);
-    --backgr-yellow: rgb(255, 244, 239);
+    --backgr-yellow: rgb(241, 235, 231);
     --backgr-blue: rgb(214, 214, 255);
     --transp-black: rgba(31, 31, 31, 0.6);
     --red:rgb(203, 0, 0);
@@ -11,6 +11,7 @@
     --highlighter: rgb(0, 247, 255);
     --lightgreen: rgb(183, 237, 183);
     --lightred: rgb(255, 198, 198);
+    --white: rgba(255, 255, 255, 0.8);
 }
 
 body {
@@ -188,7 +189,7 @@ input {
 
 .memory .card {
   background-size: cover;
-  background-image: url('light-blue.jpg');
+  background-color: var(--backgr-yellow);
   border: 10px solid white;
   height: 15vh;
   width: 8vw;
@@ -211,10 +212,11 @@ input {
     font-size: 32px;
     text-align: center;
     color: var(--text);
+    background-color: var(--white);
+    border-radius: 15px;
 }
 
 .colors .card1 {
-    background-size: cover;
     height: 8vh;
     width: 3vw;
     padding: 8px;
