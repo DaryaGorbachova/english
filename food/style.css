@@ -8,7 +8,7 @@
     --backgr-blue: rgb(222, 255, 217);
     --transp-black: rgba(31, 31, 31, 0.6);
     --red:rgb(203, 0, 0);
-    --beige: rgb(232, 222, 194);
+    --beige: rgb(235, 229, 210);
     --lightgreen: rgb(183, 237, 183);
     --lightred: rgb(255, 198, 198);
   }
@@ -163,7 +163,7 @@
     background-color: white;
     border:solid 3px hsl(0, 0%, 71%);
     border-radius: 20px;
-    height: 20px;
+    height: 25px;
     outline: none;
     padding: 5px 10px;
     font-family: 'Times New Roman', Times, serif;
@@ -172,18 +172,18 @@
   }
 
 
-  .memory {
-    display:grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-gap: 1.5vw;
-  }
+.pics input {
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+}
   
   span {
     display:block;
-    background-color: pink;
+    background-color: var(--beige);
     border: 10px solid white;
-    height: 18vh;
-    width: 11vw;
+    height: 15vh;
+    width: 15vh;
     padding: 4px;
     margin: 50px;
     border-radius: 15px;
@@ -191,30 +191,35 @@
     box-shadow: 1px 1px 7px var(--text);
     cursor: pointer;
     line-height: normal;
-
-  }
-  .memory .card:hover{
-    box-shadow: 2px 2px 10px var(--text);
-  }
-
-  .card span {
-    display:none;
-    height: 18vh;
-    width: 11vw;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;    
-  }
-  
-  .card p {
-    display:none;
-    font-variant: small-caps;
-    font-weight: bold;
-      font-size: 24px;
-      text-align: center;
+    background-position: center;
   }
 
-  @media (max-width: 1000px) {
+  .pics span {
+    margin-left:auto;
+    margin-right: auto;
+    height: 40vh;
+    width: 40vh;
+  }
+
+  .vegs {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-gap: 1vh;
+  }
+.vegs span {
+  background-color: var(--beige);
+  text-align: center;
+  padding: 10%;
+}
+
+.vegs span:hover {
+  box-shadow: 0px 0px 10px var(--text);
+}
+  
+
+  @media (max-width: 900px) {
   
 
   .back {
@@ -229,30 +234,25 @@
   input {
     width: 150px;
   }
-  .memory {
+  .vegs {
     grid-template-columns: 33% 33% 33%;
   }
-  .memory .card {
-    height: 20vh;
-    width: 18vw;
-  }
-  .card span {
-    height:20vh;
-    width: 18vw;
+  .vegs span {
+    height: 10vh;
+    width: 10vh;
+    padding: 15%;
   }
   }
+  
 
-  @media (max-width: 500px) {
-    .memory {
+  @media (max-width: 750px) {
+    .vegs {
       grid-template-columns: 50% 50%;
     }
-    .memory .card {
-      height: 20vh;
-      width: 30vw;
-    }
-    .card span {
-      height:20vh;
-      width: 30vw;
+    .vegs span {
+      height: 15vw;
+      width: 15vw;
+      font-size: 20px;
     }
     }
 

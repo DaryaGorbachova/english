@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruits (A0-A1)</title>
+    <title>Food (A0-A1)</title>
     <link rel='icon' href='../materials/icon.png'>
     <link rel='stylesheet' href='style.css'>
 </head>
@@ -43,40 +43,69 @@
           </ul>
         
     
-    <h1 style="color:white; backdrop-filter: brightness(90%);">Fruits (A0-A1)</h1></div>
+    <h1 style="color:white; backdrop-filter: brightness(90%);">Food (A0-A1)</h1></div>
     <div class="back">
 <h3>Study the words. <br>
     Изучите слова.
     </h3>
-    <ul>
+    <ul>    
+        <li><b>Fruits:</b> </li>
         <li>Apple – <i>яблоко</i></li>
         <li>Banana – <i>банан</i></li>
-        <li>Cherry – <i>вишня</i></li>
-        <li>Grapes – <i>виноград (множественное число)</i></li>
         <li>Kiwi – <i>киви</i></li>
         <li>Lemon – <i>лимон</i></li>
         <li>Orange – <i>апельсин</i></li>
-        <li>Peach – <i>персик</i></li>
-        <li>Pear – <i>груша</i></li>
-        <li>Pineapple – <i>ананас</i></li>
-        <li>Strawberry – <i>клубника</i></li>
-        <li>Watermelon – <i>арбуз</i></li>
+        <li><b>Vegetables:</b></li>
+        <li>Carrot – <i>морковь</i></li>
+        <li>Cucumber – <i>огурец</i></li>
+        <li>Potato – <i>картофель</i></li>
+        <li>Tomato – <i>помидор</i></li>
     </ul>
-<h3>Write the names of the fruits you see on the pictures.</h3>
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
-<span></span> <input class="name" type="text">
 
-<p style="text-align:right; font-style: italic;">January 2023</p>
+<h3>Choose the cards with names of vegetables. <br>
+Выберите карточки с названиями овощей.</h3>
+<div class="vegs">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<button onclick = 'checkVegs()'>Check</button>
+<button style="display:none" id="btnansw" onclick = 'showAnswers()'>Show answers</button>
+
+<b><p id="correctVeg" style="font-size: 32px;"></p></b>
+
+<h3>What do you see on the pictures? <br> Что вы видите на картинках?</h3>
+<div class="pics">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+<span></span> <input class="name" type="text">
+</div>
+<button onclick = "checkAll()">Check</button>
+<p id="correct"></p>
+
+<h3>Answer the questions.</h3>
+<ol>
+    <li>What fruits and vegetables do you like? <i style="display: none;" class="prompt">(I like ...)</i></li>
+    <li>What fruits and vegetables you don't like? <i style="display: none;" class="prompt">(I don't like ...)</i></li>
+    <li>What fruits and vegetables do you eat every day? <i style="display: none;" class="prompt">(I eat ... every day.)</i></li>
+</ol>
+<button onclick = 'showPrompt()'>Help</button>
+
+<p style="text-align:right; font-style: italic;">December 2023</p>
 </div>
 
 <footer>
@@ -84,9 +113,9 @@
         The site is developed for self-improvement. You are free to use all the material
         in your self-studying.
         <br>
-        <a target="_blank" href="https://unsplash.com/photos/M_xIaxQE3Ms">Photo</a>
-        Images of fruits by <a target="_blank" href="https://www.freepik.com/free-vector/flat-fruit-collection_13685773.htm#query=fruits&position=0&from_view=search&track=sph">Freepik</a>
-        
+        <a target="_blank" href="https://unsplash.com/photos/M_xIaxQE3Ms">Photo</a> <br>
+        Images of fruits by <a target="_blank" href="https://www.freepik.com/free-vector/flat-fruit-collection_13685773.htm#query=fruits&position=0&from_view=search&track=sph">Freepik</a> <br>
+        <a target="_blank" href="https://www.freepik.com/free-vector/vegetables-colored-icons-flat-set_9386563.htm#query=vegetables&position=1&from_view=search&track=sph&uuid=f08ce115-bcad-4958-b25f-8ccb5d76d17b">Image of vegetables by macrovector</a> on Freepik
     </p>
 </footer>
 
